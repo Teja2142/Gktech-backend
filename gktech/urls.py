@@ -40,12 +40,22 @@ File uploads (images, resumes) are handled through multipart/form-data.
     permission_classes=[permissions.AllowAny],
 )
 
+# Import JWT views
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 # URL patterns
 urlpatterns = [
     # Root endpoints
     path('', views.home, name='home'),
     # path('api/', views.api_root, name='api-root'),
     path('admin/', admin.site.urls),
+    
+    # Authentication endpoints
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
     # API Documentation
     path('swagger.json', schema_view.without_ui(cache_timeout=0), name='schema-json'),
