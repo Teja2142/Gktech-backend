@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Technologies - API Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-gray-800 text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">GK Technologies</h1>
+            <div class="space-x-4">
+                <a href="/admin/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300">Admin</a>
+                <a href="/swagger/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300">API Docs</a>
+                <a href="/redoc/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300">ReDoc</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-blue-600 text-white py-16 mt-16">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to GK Technologies API Platform</h1>
+            <p class="text-xl mb-8">Explore our comprehensive API documentation and management tools</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">Admin Panel</h2>
+                <p class="text-gray-600 mb-4">Manage users, products, careers, and news through our intuitive admin interface.</p>
+                <a href="/admin/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Access Admin</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">Swagger Documentation</h2>
+                <p class="text-gray-600 mb-4">Interactive API documentation with Swagger UI for testing endpoints.</p>
+                <a href="/swagger/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Swagger</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">ReDoc</h2>
+                <p class="text-gray-600 mb-4">Clean and elegant API documentation with ReDoc.</p>
+                <a href="/redoc/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View ReDoc</a>
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Available API Endpoints</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">Products</h3>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>GET /api/v1/products/ - List all products</li>
+                        <li>GET /api/v1/products/categories/ - List categories</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">Careers</h3>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>GET /api/v1/careers/jobs/ - List job postings</li>
+                        <li>POST /api/v1/careers/applications/ - Submit application</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">News</h3>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>GET /api/v1/news/ - List news articles</li>
+                        <li>GET /api/v1/news/categories/ - List categories</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">Users</h3>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>POST /api/v1/users/ - Register new user</li>
+                        <li>GET /api/v1/users/profile/ - Get user profile</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 GK Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
